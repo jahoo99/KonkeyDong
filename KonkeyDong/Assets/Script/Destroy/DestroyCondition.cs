@@ -8,7 +8,7 @@ public class DestroyCondition : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //Debug.Log(hitInfo.name);
-        if (other.GetComponent<PlayerCollision>())
+        if (other.GetComponent<PlayerCollision>()|| other.GetComponent<DestroyBarrelCollision>())
         {
             _barrel.DestroyObject();
         }
