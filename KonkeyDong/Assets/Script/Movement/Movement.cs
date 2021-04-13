@@ -18,7 +18,7 @@ public class Movement : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
        // float z = Input.GetAxis("Vertical");
 
-        Vector3 move = _playerPosition.right * x;
+        Vector3 move = -_playerPosition.forward * x;
 
         _controller.Move(move * _speed * Time.deltaTime);
 

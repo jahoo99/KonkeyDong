@@ -4,20 +4,19 @@ using UnityEngine;
 
 public class BarrelSpawn : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject _barrelPrefab;
+    [SerializeField] private GameObject _barrelPrefab;
     [SerializeField] private float _spawnTime = 100f;
+    [SerializeField] private Transform _barrelPlace;
     void Start()
     {
-        //GameObject a = Instantiate(_barrelPrefab) as GameObject;
         StartCoroutine(BarrelSpawnLoop());
     }
     IEnumerator BarrelSpawnLoop()
     {
-        //GameObject a = Instantiate(_barrelPrefab) as GameObject;
+       
         while (true)
         {
-            GameObject a = Instantiate(_barrelPrefab) as GameObject;
+            Instantiate(_barrelPrefab, _barrelPlace.localPosition, _barrelPlace.localRotation);
             yield return new WaitForSeconds(_spawnTime);
            
             
