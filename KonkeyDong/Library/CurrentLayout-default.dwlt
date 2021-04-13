@@ -93,7 +93,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: Scene
   m_RootView: {fileID: 8}
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &5
@@ -260,10 +260,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 678, y: 492}
-  m_MaxSize: {x: 14001, y: 14042}
+  m_MinSize: {x: 679, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 70
+  controlID: 66
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -415,8 +415,8 @@ MonoBehaviour:
     y: 0
     width: 454
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 25}
   m_Panes:
   - {fileID: 25}
@@ -539,23 +539,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 66330000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 64f3ffffe2f3ffff08f6ffff60fbfffff4ffffff
+      m_SelectedIDs: 7030ffff862effff0e2effff422effff
+      m_LastClickedID: -53694
+      m_ExpandedIDs: 684dfffffebaffff12bbffff94e4ffffdee4ffff60fbffff623c0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: SpawnPoint
-        m_OriginalName: SpawnPoint
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -3238
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 14}
       m_SearchString: 
@@ -601,9 +601,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 27.57267, y: 17.704645, z: -8.86681}
+    m_Target: {x: 31.07925, y: 8.608198, z: 7.0929}
     speed: 2
-    m_Value: {x: 27.57267, y: 17.704645, z: -8.86681}
+    m_Value: {x: 31.07925, y: 8.608198, z: 7.0929}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -650,13 +650,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.16630988, y: 0.09021038, z: -0.014638347, w: 0.9819555}
+    m_Target: {x: -0.05388415, y: -0.50081986, z: 0.029063368, w: -0.86367965}
     speed: 2
-    m_Value: {x: 0.16479442, y: 0.091694094, z: -0.014748359, w: 0.9819458}
+    m_Value: {x: -0.053826734, y: -0.5019865, z: 0.029136715, w: -0.86270696}
   m_Size:
-    m_Target: 7.240998
+    m_Target: 11.679832
     speed: 2
-    m_Value: 7.240998
+    m_Value: 11.679832
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -765,7 +765,7 @@ MonoBehaviour:
     x: 363
     y: 73
     width: 1101
-    height: 540
+    height: 655
   m_ViewDataDictionary: {fileID: 0}
   m_SplitPaneLeftWidth: 300
 --- !u!114 &23
@@ -806,21 +806,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Script/Movement
+    - Assets/Script/Shader
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Script/Movement
+  - Assets/Script/Shader
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\John\Documents\GitHub\KonkeyDong\KonkeyDong
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 74}
-    m_SelectedIDs: 18380000
-    m_LastClickedID: 14360
-    m_ExpandedIDs: 000000000a3800001638000000ca9a3b
+    scrollPos: {x: 0, y: 138}
+    m_SelectedIDs: 3e410000
+    m_LastClickedID: 16702
+    m_ExpandedIDs: 00000000123800001838000022380000903900009839000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -848,7 +848,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000a380000
+    m_ExpandedIDs: 0000000012380000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -892,7 +892,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 17}
+      m_ClientGUIView: {fileID: 16}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
