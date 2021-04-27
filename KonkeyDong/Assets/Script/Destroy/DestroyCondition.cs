@@ -8,9 +8,10 @@ public class DestroyCondition : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log(other.name);
-        if (other.GetComponent<PlayerCollision>()|| other.GetComponent<DestroyBarrelCollision>())
+        if (other.GetComponent<PlayerCollision>())
         {
             _barrel.DestroyObject();
+            LevelManager.Instance.Restart();
         }
 
     }

@@ -13,15 +13,10 @@ public class BarrelSpawn : MonoBehaviour
     }
     IEnumerator BarrelSpawnLoop()
     {
-       
         while (true)
         {
             Instantiate(_barrelPrefab, _barrelPlace.localPosition, _barrelPlace.localRotation);
             yield return new WaitForSeconds(_spawnTime);
-           
-            
-            
         }
     }
-
 }
