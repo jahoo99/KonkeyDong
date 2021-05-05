@@ -1,5 +1,13 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Levels/FirstLevel.unity
+=======
+<<<<<<< Updated upstream
+- path: Assets/Scenes/SampleScene.unity
+=======
+- path: Assets/Scenes/Levels/SecondLevel.unity
+>>>>>>> Stashed changes
+>>>>>>> Jan
   isLoaded: 1
   isActive: 1
   isSubScene: 0

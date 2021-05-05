@@ -20,4 +20,8 @@ public class Pause : MonoBehaviour
     {
         LevelManager.Instance.MainMenu();
     }
+    public void Restart()
+    {
+        LevelManager.Instance.Restart();
+    }
 }

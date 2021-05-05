@@ -13,9 +13,5 @@ public class DestroyCondition : MonoBehaviour
             _barrel.DestroyObject();
             LevelManager.Instance.Restart();
         }
-
     }
-    
-
-
 }
