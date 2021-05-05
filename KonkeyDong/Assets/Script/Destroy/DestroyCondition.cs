@@ -12,9 +12,5 @@ public class DestroyCondition : MonoBehaviour
         {
             _barrel.DestroyObject();
         }
-
     }
-    
-
-
 }
