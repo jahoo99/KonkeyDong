@@ -12,7 +12,7 @@ public class CameraShaderController : MonoBehaviour
     [SerializeField] private Shader gbShader;
 
     public List<SnapshotFilter> filters = new List<SnapshotFilter>();
-    private int filterIndex = 1;
+    private int filterIndex = 0;
     private void Awake()
     {
 
