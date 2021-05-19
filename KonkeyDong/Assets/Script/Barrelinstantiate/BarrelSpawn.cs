@@ -15,7 +15,7 @@ public class BarrelSpawn : MonoBehaviour
     {
         while (true)
         {
-            Instantiate(_barrelPrefab, _barrelPlace.localPosition, _barrelPlace.localRotation);
+            Instantiate(_barrelPrefab, _barrelPlace.position, _barrelPlace.localRotation);
             yield return new WaitForSeconds(_spawnTime);
         }
     }

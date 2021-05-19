@@ -11,7 +11,7 @@ public class DestroyCondition : MonoBehaviour
         if (other.GetComponent<PlayerCollision>())
         {
             _barrel.DestroyObject();
-            LevelManager.Instance.Restart();
+           // LevelManager.Instance.Restart();
         }
 
     }
