@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2d0f79c87c2795498952576b71b2ef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animType: 1
   _jumpAmount: 41
   _jumpDistance: 6
   _jumpDuration: 1

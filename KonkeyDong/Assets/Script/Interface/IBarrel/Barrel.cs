@@ -6,9 +6,8 @@ public class Barrel : MonoBehaviour
 {
     void OnTriggerEnter(Collider other)
     {
-
-        MonoBehaviour[] list = other.gameObject.GetComponents <MonoBehaviour > ();
-        foreach (MonoBehaviour mb in list)
+        IBarrel[] list = other.gameObject.GetComponents<IBarrel>();
+        foreach (IBarrel mb in list)
          {
             if (mb is IBarrel)
             {

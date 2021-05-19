@@ -5,10 +5,11 @@ using DG.Tweening;
 
 public class BarrelJump : MonoBehaviour
 {
-    [SerializeField] private int _jumpAmount;
-    [SerializeField] private float _jumpDistance;
-    [SerializeField] private float _jumpDuration;
-    [SerializeField] private float _jumpHeight;
+    [SerializeField] private Ease _animType;
+    [SerializeField] private int _jumpAmount = 0;
+    [SerializeField] private float _jumpDistance = 0;
+    [SerializeField] private float _jumpDuration = 0;
+    [SerializeField] private float _jumpHeight = 0;
     private float _z;
     private float _y;
     private const int _jumpRepetition = 1;
@@ -40,7 +41,7 @@ public class BarrelJump : MonoBehaviour
         if (_jumpAmount>0)
         {
           //  Debug.Log(transform.position.x);
-            _rb.DOJump(new Vector3(transform.position.x - _jumpDistance, _y, _z), _jumpHeight, _jumpRepetition, _jumpDuration, false).OnComplete(() =>
+            _rb.DOJump(new Vector3(transform.position.x - _jumpDistance, _y, _z), _jumpHeight, _jumpRepetition, _jumpDuration, false).SetEase(_animType).OnComplete(() =>
             {
                 _jumpAmount--; 
                 Jump();
