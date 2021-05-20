@@ -2,27 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class LevelManager : MonoBehaviour
+public class LevelManager : MonoSingleton<LevelManager>
 {
-    private static LevelManager _instance;
-    public static LevelManager Instance
-    {
-        get
-        {
-            if (_instance == null)
-            {
-                GameObject go = new GameObject(typeof(LevelManager).ToString());
-                go.AddComponent<LevelManager>();
-            }
-            return _instance;
-        }
-    }
+   
 
     private int _buildIndex;
     private Scene currentScene;
-    private void Awake()
+    protected override void OnAwake()
     {
-        _instance = this as LevelManager;
+        base.OnAwake();
+       
         currentScene = SceneManager.GetActiveScene();
         int _buildIndex = currentScene.buildIndex;
     }

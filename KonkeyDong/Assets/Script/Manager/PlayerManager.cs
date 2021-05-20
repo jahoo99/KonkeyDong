@@ -2,25 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerManager : MonoBehaviour
+public class PlayerManager : MonoSingleton<PlayerManager>
 {
-    private static PlayerManager _instance;
-    public static PlayerManager Instance
-    {
-        get
-        {
-            if (_instance == null)
-            {
-                GameObject go = new GameObject(typeof(PlayerManager).ToString());
-                go.AddComponent<PlayerManager>();
-            }
-            return _instance;
-        }
-    }
-    private void Awake()
-    {
-        _instance = this as PlayerManager;
-    }
     private int _health = 3; 
     public void HealthLoss(int _damage)
     {
@@ -31,9 +14,9 @@ public class PlayerManager : MonoBehaviour
     {
         if (_health<=0)
         {
+            _health = 0;
             Debug.Log("Die");
             LevelManager.Instance.Restart();
         }
-
     }    
 }
