@@ -29,13 +29,6 @@ public class BarrelJump : MonoBehaviour
     {
         Jump();
     }
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Jump();
-        }
-    }
     private void Jump()
     {
         if (_jumpAmount>0)
@@ -43,7 +36,8 @@ public class BarrelJump : MonoBehaviour
           //  Debug.Log(transform.position.x);
             _rb.DOJump(new Vector3(transform.position.x - _jumpDistance, _y, _z), _jumpHeight, _jumpRepetition, _jumpDuration, false).SetEase(_animType).OnComplete(() =>
             {
-                _jumpAmount--; 
+                _jumpAmount--;
+                SnapPosition();
                 Jump();
             });
         }
@@ -51,6 +45,12 @@ public class BarrelJump : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+    }
+    private void SnapPosition()
+    {
+        int posx = Mathf.RoundToInt(transform.position.x);
+        int posy = Mathf.RoundToInt(transform.position.y);
+        transform.position = new Vector3(posx, posy, _z);
     }
 
 }

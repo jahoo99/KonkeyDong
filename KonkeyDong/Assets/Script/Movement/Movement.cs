@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using DG.Tweening;
 public class Movement : MonoBehaviour
 {
     [SerializeField] private CharacterController _controller;
@@ -36,7 +36,8 @@ public class Movement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && _isGrounded)
         {
-            velocity.y = Mathf.Sqrt(_jumpHeight * _defaultVelocity * gravity);
+            
+           velocity.y = Mathf.Sqrt(_jumpHeight * _defaultVelocity * gravity);
         }
 
         velocity.y += gravity * Time.deltaTime;
