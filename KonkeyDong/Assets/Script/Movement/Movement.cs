@@ -4,46 +4,29 @@ using UnityEngine;
 using DG.Tweening;
 public class Movement : MonoBehaviour
 {
-    [SerializeField] private CharacterController _controller;
-    [SerializeField] private Transform _playerPosition;
+    private Rigidbody _rb;
+    [SerializeField] private float m_Speed = 5f;
+    [SerializeField] private float _jumpForce = 500;
+    private 
 
-
-    [SerializeField] private float _speed = 12f;
-    [SerializeField] private float gravity = -9.81f;
-    [SerializeField] private float _jumpHeight = 3f;
-    [SerializeField] private float _defaultVelocity = -2f;
-
-    [SerializeField] private Transform _groundCheck;
-    [SerializeField] private float _groundDistance = 0.4f;
-    [SerializeField] private LayerMask _groundMask;
-
-    Vector3 velocity;
-    private bool _isGrounded;
-    void Update()
+    void Awake()
     {
-        _isGrounded = Physics.CheckSphere(_groundCheck.position, _groundDistance, _groundMask);
-
-        if (_isGrounded && velocity.y < 0)
+        _rb = GetComponent<Rigidbody>();
+    }
+    private void Update()
+    {
+        Vector3 m_Input = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
+        transform.DOMoveX(transform.position.x + m_Input.x, 1, false);
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            velocity.y = _defaultVelocity;
+            Jump();
         }
+    }
 
-        float x = Input.GetAxis("Horizontal");
-
-        Vector3 move = -_playerPosition.forward * x;
-
-        _controller.Move(move * _speed * Time.deltaTime);
-
-        if (Input.GetButtonDown("Jump") && _isGrounded)
-        {
-            
-           velocity.y = Mathf.Sqrt(_jumpHeight * _defaultVelocity * gravity);
-        }
-
-        velocity.y += gravity * Time.deltaTime;
-
-        _controller.Move(velocity * Time.deltaTime);
-
-
+    private void Jump()
+    {
+         _rb.AddForce(Vector3.up* _jumpForce);
+        Debug.Log("No działa");
+        
     }
 }

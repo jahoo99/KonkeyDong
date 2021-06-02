@@ -114,7 +114,8 @@ GameObject:
   - component: {fileID: 4360726663767168037}
   - component: {fileID: 4360726663767168038}
   - component: {fileID: 4360726663767168039}
-  - component: {fileID: 4360726663767168032}
+  - component: {fileID: 2021237602}
+  - component: {fileID: 2021237603}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -213,32 +214,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1788fa2af27ad0d429d51177d895199b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _controller: {fileID: 4360726663767168032}
-  _playerPosition: {fileID: 4360726663767168043}
-  _speed: 12
-  gravity: -15.16
-  _jumpHeight: 4
-  _defaultVelocity: -2
-  _groundCheck: {fileID: 994281854}
-  _groundDistance: 0.4
-  _groundMask:
-    serializedVersion: 2
-    m_Bits: 256
---- !u!143 &4360726663767168032
-CharacterController:
+  _animType: 32
+  m_Speed: 5
+--- !u!54 &2021237602
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4360726663767168033}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &2021237603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4360726663767168033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a0a97d61d4d2824b81e922c580582e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rb: {fileID: 0}

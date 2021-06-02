@@ -3,14 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour{
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-       // Debug.Log(other.gameObject.name);
-        //if (other.gameObject.name)
-        //{
-        //    Debug.Log("No się klikło no ");
-        //}
+        IPlayerCollision[] list = other.gameObject.GetComponents<IPlayerCollision>();
+        foreach (IPlayerCollision mb in list)
+        {
+            if (mb is IPlayerCollision)
+            {
+                IPlayerCollision breakable = (IPlayerCollision)mb;
+                breakable.PlayerTouch();
+            }
+        }
 
+
+        
     }
 
 }

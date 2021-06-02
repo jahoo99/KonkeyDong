@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class PlayerManager : MonoSingleton<PlayerManager>
 {
-    private int _health = 3; 
+
+    private int _health = 7;
     public void HealthLoss(int _damage)
     {
         _health -= _damage;
+        ReferenceManager.Instance.HPTextUpdate(_health);
         HealthCheck();
     }
     public void HealthCheck()
@@ -18,5 +20,17 @@ public class PlayerManager : MonoSingleton<PlayerManager>
             Debug.Log("Die");
             LevelManager.Instance.Restart();
         }
-    }    
+    }
+    private int _points = 0;
+    private int _winCondition = 20;
+    public void AddPoints(int pointsAdded)
+    {
+        _points += pointsAdded;
+        ReferenceManager.Instance.ScoreUpdate(_points);
+
+        if (_points>=_winCondition)
+        {
+            LevelManager.Instance.NextLevel();
+        }
+    }
 }
