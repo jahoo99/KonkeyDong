@@ -5,15 +5,15 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637582296792991219
-    m_Hash: 3071435062
+      ticks: 637587846343697350
+    m_Hash: 1371755918
   m_LockFileStatus:
     m_FilePath: C:/Users/John/Documents/GitHub/KonkeyDong/KonkeyDong/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637582296808687835
+      ticks: 637587847140642605
     m_Hash: 2147608292
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -2905,6 +2905,7 @@ m_PackageAssets:
         - 7.5.1
         - 7.5.2
         - 7.5.3
+        - 7.6.0
         - 8.0.1
         - 8.1.0
         - 8.2.0
@@ -2920,6 +2921,9 @@ m_PackageAssets:
         - 10.2.1
         - 10.2.2
         - 10.3.1
+        - 10.3.2
+        - 10.4.0
+        - 10.5.0
         compatible:
         - 8.3.1
         - 9.0.0-preview.13
