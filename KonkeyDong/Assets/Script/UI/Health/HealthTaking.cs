@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+
 
 public class HealthTaking : MonoBehaviour
 {
-    [SerializeField] private Text _text;
+    [SerializeField] private TextMeshProUGUI _text;
 
 
     public void UpdateHealth(int health)

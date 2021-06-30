@@ -6,8 +6,12 @@ public class Movement : MonoBehaviour
 {
     private Rigidbody _rb;
     [SerializeField] private float m_Speed = 5f;
-    [SerializeField] private float _jumpForce = 500;
-    private 
+    [SerializeField] private float _jumpForce = 0;
+    
+    private bool _isGrounded;
+    [SerializeField] private Transform _groundCheck;
+    [SerializeField] private float _groundDistance;
+    [SerializeField] private LayerMask _groundMask;
 
     void Awake()
     {
@@ -15,8 +19,10 @@ public class Movement : MonoBehaviour
     }
     private void Update()
     {
+        _isGrounded = Physics.CheckSphere(_groundCheck.position, _groundDistance, _groundMask);
+
         Vector3 m_Input = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
-        transform.DOMoveX(transform.position.x + m_Input.x, 1, false);
+        transform.DOMoveX(transform.position.x +m_Speed * Time.deltaTime *m_Input.x, 1, false);
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Jump();
@@ -25,8 +31,12 @@ public class Movement : MonoBehaviour
 
     private void Jump()
     {
-         _rb.AddForce(Vector3.up* _jumpForce);
-        Debug.Log("No działa");
+        if (_isGrounded)
+        {
+            _rb.AddForce(Vector3.up * _jumpForce);
+            _isGrounded= false;
+        }
+         
         
     }
 }

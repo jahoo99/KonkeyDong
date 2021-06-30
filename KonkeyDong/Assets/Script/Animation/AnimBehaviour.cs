@@ -4,7 +4,6 @@ using System.Collections;
 public class AnimBehaviour : MonoBehaviour
 {
 	private int _negative = -1;
-	// Use this for initialization
 	private Animator _anim;
 	void Start()
 	{

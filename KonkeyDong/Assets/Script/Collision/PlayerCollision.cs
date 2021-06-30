@@ -14,9 +14,6 @@ public class PlayerCollision : MonoBehaviour{
                 breakable.PlayerTouch();
             }
         }
-
-
-        
     }
 
 }

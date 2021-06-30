@@ -17,12 +17,6 @@ public class Barrel : MonoBehaviour
         }
 
 
-       // Debug.Log(other.gameObject.name);
-        //IBarrel testInterface = other as IBarrel;
-
-        //if (testInterface != null)
-        //{
-        //    testInterface.Barrel();
-        //}
+       
     }
 }

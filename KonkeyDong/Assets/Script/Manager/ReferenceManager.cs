@@ -6,6 +6,7 @@ public class ReferenceManager : MonoSingleton<ReferenceManager>
 {
 
     [SerializeField]private AddingPointsOnUI _pointsUI;
+   
     public void ScoreUpdate(int points)
     {
         _pointsUI.UpdatePoints(points);

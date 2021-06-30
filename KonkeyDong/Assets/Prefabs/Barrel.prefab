@@ -156,8 +156,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animType: 1
   _jumpAmount: 41
-  _jumpDistance: 6
-  _jumpDuration: 0.9
+  _jumpDistance: 12
+  _jumpDuration: 2
   _jumpHeight: 7
 --- !u!114 &1145432420622796736
 MonoBehaviour:
@@ -171,3 +171,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a0a7c47bf4173a40958ca7ff4898e4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 1
+  _pr: {fileID: 0}

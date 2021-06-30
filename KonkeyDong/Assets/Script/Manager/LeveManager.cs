@@ -7,13 +7,11 @@ public class LevelManager : MonoSingleton<LevelManager>
    
 
     private int _buildIndex;
-    private Scene currentScene;
     protected override void OnAwake()
     {
         base.OnAwake();
        
-        currentScene = SceneManager.GetActiveScene();
-        int _buildIndex = currentScene.buildIndex;
+        _buildIndex = SceneManager.GetActiveScene().buildIndex;
     }
 
     private int _menu = 0;
@@ -21,7 +19,7 @@ public class LevelManager : MonoSingleton<LevelManager>
 
     public void Restart()
     {
-        SceneManager.LoadScene(1, LoadSceneMode.Single); // to działa ale nie powinno, jest zjebane popraw
+        SceneManager.LoadScene(_buildIndex, LoadSceneMode.Single); // to działa ale nie powinno, jest zjebane popraw
     }
     public void FirstLevel()
     {
@@ -47,7 +45,6 @@ public class LevelManager : MonoSingleton<LevelManager>
 
     private int _stop = 0;
     private int _resume = 1;
-    private bool _time;
 
     public void StopTime()
     {
